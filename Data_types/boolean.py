@@ -100,6 +100,7 @@ print(text.isalpha())  #True
 print(text.isdigit())  #False
 print(text.islower())  #False
 print(text.isupper())  #False
+print(text.isspace())  #False
 
 
 #real life example
@@ -116,6 +117,11 @@ is_logged_in = True
 if is_logged_in:
     print("Welcome back, user!")
 else:
-    print("Please log in to continue.")
+    print("Please log in to continue.")  
 
-    
+
+#combining boolean expressions
+
+
+
+ 
