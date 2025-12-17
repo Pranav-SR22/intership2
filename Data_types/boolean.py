@@ -101,6 +101,9 @@ print(text.isdigit())  #False
 print(text.islower())  #False
 print(text.isupper())  #False
 print(text.isspace())  #False
+print(text.isalnum())  #True
+print(text.startswith("T"))  #True
+print(text.endswith("e"))    #True
 
 
 #real life example

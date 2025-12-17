@@ -6,9 +6,9 @@ else:
     print("Access denied.")
 
 
-name = "Alice"
-if name == "Alice" or name == "Bob":
-    print("Hello, valued user!")
+name = "Pranav"
+if name == "Pranav" or name == "Adityan":
+    print("Hello, correct user!")
 else:
     print("Hello, guest!")
 
