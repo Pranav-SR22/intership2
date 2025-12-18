@@ -35,3 +35,9 @@ if (score >= 90 and grade == 'A') or (score >= 80 and grade == 'B'):
 else:
     print("You did not pass with distinction.")
  
+s = "python"
+reversed_s = s[::-1]
+print(reversed_s)
+
+a=3.884
+print(round(a))
