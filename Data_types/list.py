@@ -216,6 +216,19 @@ c.append(5)
 print("a:", a)  #[1, 2, 3, 4]
 print("c:", c)  #[1, 2, 3, 4, 5] c is a separate copy
 
+#shallow vs deep copy
+import copy
+original = [[1, 2, 3], [4, 5, 6]]
+shallow_copied = copy.copy(original)
+deep_copied = copy.deepcopy(original)
+shallow_copied[0][0] = 99
+print("original after shallow copy change:", original)  #[[99, 2, 3], [4, 5, 6]] #change affects original list
+deep_copied[1][1] = 88
+print("original after deep copy change:", original)  #[[99, 2, 3], [4, 5, 6]]   
+print("deep copied list:", deep_copied)  #[[1, 2, 3], [4, 88, 6]]
+
+#shallow copy copies references of nested objects
+
 #change in copy does not affect original list
 
 
@@ -314,3 +327,9 @@ cart = ["apple", "banana", "orange"]
 cart.append("grape")
 print("Shopping Cart:", cart)  #Shopping Cart: ['apple', 'banana', 'orange', 'grape']
 
+l1 = [1, 2, 3]
+l2 = [4, 5, 6]
+l1 = l1 + l2
+print("Combined List:", l1)  #Combined List: [1, 2, 3, 4, 5, 6]
+print("orginal l2 remains:", l2)  #original l2 remains: [4, 5, 6]
+print("orginal l1 modified:", l1)  #original l1 modified: [1, 2, 3, 4, 5, 6]
