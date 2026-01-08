@@ -514,7 +514,7 @@ dict1_copy = dict1.copy()
 dict1_copy.update(dict2)
 print("\nMerged using update():", dict1_copy)
 
-# Using unpacking
+"""# Using unpacking
 merged = {dict1, dict2}
 print("Merged using unpacking:", merged)
 
@@ -535,4 +535,86 @@ dict_x = {"x": 1}
 dict_y = {"y": 2}
 dict_z = {"z": 3}
 all_merged = {dict_x, dict_y, dict_z}
-print("\nMerging three dictionaries:", all_merged)
+print("\nMerging three dictionaries:", all_merged)"""
+
+#Dictionary sorting
+
+#sorted() returns a new sorted list of keys
+#can sort by keys or values using a custom key function
+#use items() to get key-value pairs for sorting by values
+
+data = {"banana": 3, "apple": 4, "pear": 1, "orange": 2}
+# Sort by keys
+sorted_by_keys = sorted(data)
+print("\nSorted by keys:", sorted_by_keys)
+# Sort by values
+sorted_by_values = sorted(data.items(), key=lambda item: item[1])
+print("Sorted by values:", sorted_by_values)    
+# Sort by values (only keys)
+sorted_keys_by_values = [k for k, v in sorted(data.items(), key=lambda item
+: item[1])]
+print("Keys sorted by values:", sorted_keys_by_values)
+
+
+#built-in functions with dictionaries
+
+sample_dict = {"a": 10, "b": 20, "c": 5, "d": 15}
+print("\nSample dictionary:", sample_dict)
+
+#len() - number of key-value pairs
+print("Length:", len(sample_dict)) #4
+
+#min() - minimum key
+print("Min key:", min(sample_dict)) #'a'
+
+#max() - maximum key
+print("Max key:", max(sample_dict)) #'d'
+
+#sum() - sum of values
+print("Sum of values:", sum(sample_dict.values())) #50
+
+#any() - True if any value is truthy
+print("Any truthy value:", any(sample_dict.values())) #True
+
+#all() - True if all values are truthy
+print("All truthy values:", all(sample_dict.values())) #True
+
+#==================================================================================
+
+#converting dictionary to other data types
+
+sample_dict = {"name": "Alice", "age": 25, "city": "New York"}
+print("\nSample dictionary:", sample_dict)
+# To list of keys
+keys_list = list(sample_dict)
+print("List of keys:", keys_list)
+# To list of values
+values_list = list(sample_dict.values())
+print("List of values:", values_list)
+# To list of items (tuples)
+items_list = list(sample_dict.items())
+print("List of items:", items_list)
+# To tuple of keys
+keys_tuple = tuple(sample_dict)
+print("Tuple of keys:", keys_tuple)
+# To tuple of values
+values_tuple = tuple(sample_dict.values())
+print("Tuple of values:", values_tuple)
+# To tuple of items
+items_tuple = tuple(sample_dict.items())
+print("Tuple of items:", items_tuple)
+# To set of keys
+keys_set = set(sample_dict)
+print("Set of keys:", keys_set)
+
+pairs = [("x", 1), ("y", 2), ("z", 3)]
+# From list of tuples to dictionary
+dict_from_pairs = dict(pairs)
+print("\nDictionary from list of tuples:", dict_from_pairs) #{'x': 1, 'y': 2, 'z': 3}
+# From two lists to dictionary using zip()
+keys = ["p", "q", "r"]
+values = [10, 20, 30]
+dict_from_lists = dict(zip(keys, values))
+print("Dictionary from two lists using zip():", dict_from_lists) #{'p': 10, 'q': 20, 'r': 30}
+
+
